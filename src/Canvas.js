@@ -1,14 +1,16 @@
 import React, { Component } from "react";
+import tenis from "./tenis.mp3";
+import pilka from "./pilka.mp3";
 class Canvas extends Component {
   componentDidMount() {
     const canvas = this.refs.canvas;
     const ctx = canvas.getContext("2d");
 
     canvas.width = 1000;
-    canvas.height = 500;
+    canvas.height = 540;
 
     const cw = canvas.width;
-    const ch = canvas.height;
+    const ch = canvas.height - 40;
 
     const ballSize = 20;
     let ballX = cw / 2 - ballSize / 2;
@@ -29,6 +31,8 @@ class Canvas extends Component {
     let aiPoints = 0;
     let aiSpeedA = 18;
     let aiSpeedB = 12;
+    const audio = new Audio(tenis);
+    const balls = new Audio(pilka);
 
     function table() {
       ctx.fillStyle = "black";
@@ -72,22 +76,26 @@ class Canvas extends Component {
 
       if (ballX <= 0) {
         start();
+        audio.play();
         aiPoints = aiPoints + 1;
         aiSpeedA = aiSpeedA - 2;
         aiSpeedB = aiSpeedB - 2;
         if (aiPoints === 3) {
           aiPoints = "AI WIN!!!";
           stop();
+          audio.play();
         }
       }
       if (ballX + ballSize >= cw) {
         start();
+        audio.play();
         playerPoints = playerPoints + 1;
         aiSpeedA = aiSpeedA + 2;
         aiSpeedB = aiSpeedB + 2;
         if (playerPoints === 3) {
           playerPoints = "PLAYER WIN!!!";
           stop();
+          audio.play();
         }
       }
       if (
@@ -98,6 +106,7 @@ class Canvas extends Component {
       ) {
         ballSpeedX = -ballSpeedX;
         speedUpX();
+        balls.play();
       }
       if (
         ballX + ballSize >= aiX &&
@@ -107,6 +116,7 @@ class Canvas extends Component {
       ) {
         ballSpeedX = -ballSpeedX;
         speedUpX();
+        balls.play();
       }
     }
     function paddel() {
@@ -174,6 +184,15 @@ class Canvas extends Component {
       ctx.fillStyle = "red";
       ctx.fillText(`${aiPoints}`, 750, 50);
     }
+
+    function buttonStart() {
+      ctx.fillStyle = "blue";
+      ctx.fillRect(0, ch, 250, 540);
+      ctx.font = "32px arial";
+      ctx.fillStyle = "red";
+      ctx.fillText("START", 70, 530);
+    }
+
     function game() {
       table();
       ball();
@@ -181,6 +200,7 @@ class Canvas extends Component {
       aiPosition();
       playerPoint();
       aiPoint();
+      buttonStart();
     }
 
     setInterval(game, 1000 / 60);
