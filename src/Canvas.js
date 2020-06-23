@@ -7,10 +7,10 @@ class Canvas extends Component {
     const ctx = canvas.getContext("2d");
 
     canvas.width = 1000;
-    canvas.height = 540;
+    canvas.height = 500;
 
     const cw = canvas.width;
-    const ch = canvas.height - 40;
+    const ch = canvas.height;
 
     const ballSize = 20;
     let ballX = cw / 2 - ballSize / 2;
@@ -185,14 +185,6 @@ class Canvas extends Component {
       ctx.fillText(`${aiPoints}`, 750, 50);
     }
 
-    function buttonStart() {
-      ctx.fillStyle = "blue";
-      ctx.fillRect(0, ch, 250, 540);
-      ctx.font = "32px arial";
-      ctx.fillStyle = "red";
-      ctx.fillText("START", 70, 530);
-    }
-
     function game() {
       table();
       ball();
@@ -200,7 +192,6 @@ class Canvas extends Component {
       aiPosition();
       playerPoint();
       aiPoint();
-      buttonStart();
     }
 
     setInterval(game, 1000 / 60);
