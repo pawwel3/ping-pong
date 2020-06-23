@@ -1,22 +1,24 @@
 {
   "files": {
     "main.css": "/ping-pong/static/css/main.0fb77471.chunk.css",
-    "main.js": "/ping-pong/static/js/main.e9d4b784.chunk.js",
-    "main.js.map": "/ping-pong/static/js/main.e9d4b784.chunk.js.map",
+    "main.js": "/ping-pong/static/js/main.c25ffeff.chunk.js",
+    "main.js.map": "/ping-pong/static/js/main.c25ffeff.chunk.js.map",
     "runtime-main.js": "/ping-pong/static/js/runtime-main.a8f26b41.js",
     "runtime-main.js.map": "/ping-pong/static/js/runtime-main.a8f26b41.js.map",
-    "static/js/2.18e904fc.chunk.js": "/ping-pong/static/js/2.18e904fc.chunk.js",
-    "static/js/2.18e904fc.chunk.js.map": "/ping-pong/static/js/2.18e904fc.chunk.js.map",
+    "static/js/2.d306e0d7.chunk.js": "/ping-pong/static/js/2.d306e0d7.chunk.js",
+    "static/js/2.d306e0d7.chunk.js.map": "/ping-pong/static/js/2.d306e0d7.chunk.js.map",
     "index.html": "/ping-pong/index.html",
-    "precache-manifest.ee6bde2f037fdc7783970f2a5f92e36a.js": "/ping-pong/precache-manifest.ee6bde2f037fdc7783970f2a5f92e36a.js",
+    "precache-manifest.0764d3b87e698aa1948a03065d4f1935.js": "/ping-pong/precache-manifest.0764d3b87e698aa1948a03065d4f1935.js",
     "service-worker.js": "/ping-pong/service-worker.js",
     "static/css/main.0fb77471.chunk.css.map": "/ping-pong/static/css/main.0fb77471.chunk.css.map",
-    "static/js/2.18e904fc.chunk.js.LICENSE.txt": "/ping-pong/static/js/2.18e904fc.chunk.js.LICENSE.txt"
+    "static/js/2.d306e0d7.chunk.js.LICENSE.txt": "/ping-pong/static/js/2.d306e0d7.chunk.js.LICENSE.txt",
+    "static/media/pilka.mp3": "/ping-pong/static/media/pilka.a3e90b76.mp3",
+    "static/media/tenis.mp3": "/ping-pong/static/media/tenis.923b3323.mp3"
   },
   "entrypoints": [
     "static/js/runtime-main.a8f26b41.js",
-    "static/js/2.18e904fc.chunk.js",
+    "static/js/2.d306e0d7.chunk.js",
     "static/css/main.0fb77471.chunk.css",
-    "static/js/main.e9d4b784.chunk.js"
+    "static/js/main.c25ffeff.chunk.js"
   ]
 }
